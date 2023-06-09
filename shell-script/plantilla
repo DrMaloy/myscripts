@@ -1,0 +1,47 @@
+#!/bin/bash
+
+#Este programa permite crear una plantilla personalizada para el desarrollo de cualquier script
+
+
+uso_plantilla () {
+  
+  echo "Uso: ${0} NOMBRE_DEL_SCRIPT " >&2
+  echo 'Crea un script con algunos datos básicos'
+  exit 1
+}
+
+#hacemos una comprobación
+
+if [[ "${#}" -eq 0 ]]
+then
+  uso_plantilla
+fi
+
+#Damos nombre al script
+
+NOMBRE_DEL_SCRIPT=${1}.sh
+touch ${NOMBRE_DEL_SCRIPT}
+
+#Leemos los datos básicos
+
+read -p "Ingrese su nombre completo: " NOMBRE
+read -p "Ingrese el propósito del script: " PROPOS
+
+#Generamos una fecha de creación
+
+CREAC=`date`
+
+#Ordenamos y asignamos datos
+
+echo '#!/bin/bash' >> ${NOMBRE_DEL_SCRIPT}
+echo " " >> ${NOMBRE_DEL_SCRIPT}
+echo "# Nombre: $(basename ${NOMBRE_DEL_SCRIPT})" >> ${NOMBRE_DEL_SCRIPT}
+echo "# Propósito: ${PROPOS}" >> ${NOMBRE_DEL_SCRIPT}
+echo "# Versión: 1.0" >> ${NOMBRE_DEL_SCRIPT}
+echo "# Fecha de creación: ${CREAC}" >> ${NOMBRE_DEL_SCRIPT}
+echo "# Última modificación: " >> ${NOMBRE_DEL_SCRIPT}
+echo "# Autor: ${NOMBRE}" >> ${NOMBRE_DEL_SCRIPT}
+
+
+exit 0
+
