@@ -2,8 +2,19 @@
                                      *****
 # Cheatsheet de Wildcards
 
-.   El punto siginifica un caracter en una sola posición que hace match con cualquier caracter.
+.     El punto siginifica un caracter en una sola posición que hace match con cualquier caracter.
 
-.*  Significa cero o más ocurrencias de un wildcard, lo que significa, cero o más ocurrencias
-    de cualquier caracter.
+.*    Cero o más ocurrencias de un wildcard, lo que significa, cero o más ocurrencias
+      de cualquier caracter.
+
+\s    Una ocurrencia de espacio en blanco.
+
+\s*   Cero o mas ocurrencias de espacios en blanco.
+
+# Character Class
+
+[abc]   Uno de los caracteres dentro de los [] - a,b o c .
+
+[^abc]  Cualquier caracter excepto el contenido de [] en un sola posicion.
+
 
