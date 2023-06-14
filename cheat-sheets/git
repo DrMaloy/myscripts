@@ -1,0 +1,3 @@
+git checkout <branch>
+git fetch -p origin # Update el branch en el que estoy
+
