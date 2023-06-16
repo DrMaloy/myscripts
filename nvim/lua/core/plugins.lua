@@ -33,13 +33,13 @@ return require('packer').startup(function(use)
 
   -- treesitter 
   use  'nvim-treesitter/nvim-treesitter'
-
+  
   -- Tab completiono
   use {
   "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
   }
-
+  
   -- Mason
   use {
     "williamboman/mason.nvim",
