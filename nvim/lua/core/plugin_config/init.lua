@@ -1,7 +1,0 @@
-require("core.plugin_config.catppuccin")
---require("core.plugin_config.tokyonight")
-require("core.plugin_config.lualine")
-require("core.plugin_config.nvim-tree")
-require("core.plugin_config.indent-blankline")
-require("core.plugin_config.treesitter")
-require("core.plugin_config.completions")
