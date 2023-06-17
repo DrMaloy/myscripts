@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls", "clangd" }
+  ensure_installed = { "sumneko_lua", "solargraph" }
 })
 
 local on_attach = function(_, _)
@@ -15,11 +15,26 @@ end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-require("lspconfig").lua_ls.setup {
+require("lspconfig").sumneko_lua.setup {
   on_attach = on_attach,
   capabilities = capabilities,
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { "vim" },
+      },
+      workspace = {
+        library = {
+          [vim.fn.expand "$VIMRUTINE/lua"] = true,
+          [vim.fn.stdpath "config" .. "/lua"] = true,
+        },
+      },
+    },
+  }
 }
-require("lspconfig").clangd.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
+
+require("lspconfig").solargraph.setup {
+  on_attach = on_attach
+  capatibilities = capatibilities,
 }
+
