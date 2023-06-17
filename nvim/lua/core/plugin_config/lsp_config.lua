@@ -34,7 +34,7 @@ require("lspconfig").sumneko_lua.setup {
 }
 
 require("lspconfig").solargraph.setup {
-  on_attach = on_attach
+  on_attach = on_attach,
   capabilities = capabilities,
 }
 
