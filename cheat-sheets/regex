@@ -17,4 +17,12 @@
 
 [^abc]  Cualquier caracter excepto el contenido de [] en un sola posicion.
 
+# El simbolo ^ tiene una significaciion diferente fuera de los  []
+
+[a-c]
+
+[a-cx]
+
+[a-cA-Cx]
+
 
