@@ -19,7 +19,6 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
-  use 'nvim-treesitter/nvim-treesitter'
 
   -- indentatio lines
   use "lukas-reineke/indent-blankline.nvim"
@@ -45,6 +44,7 @@ return require('packer').startup(function(use)
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
+    "glepnir/lspsaga.nvim",
   }
   
   -- Telescope
