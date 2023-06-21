@@ -17,7 +17,9 @@
 
 [^abc]      Cualquier caracter excepto los contenidos en [] en un sola posicion.
 
-# El simbolo ^ tiene una significaciion diferente fuera de los  []
+# Character Classes with ranges
+
+* El simbolo ^ tiene una significaciion diferente fuera de los  []
 
 [a-c]       Uno de los caracteres que se encuentre en el rango dados en los [] - a,b o c.
 
@@ -26,16 +28,35 @@
 [a-cA-Cx]   Uno de los caracteres en cualquiera de los 2 rangos o culquier otra opción dada en los []. 
             a, b, c, A, B, C, o x.
 
-# Caracteres con significados especiales en Regex ^$(.[)=\ deben ser escapados con '\' backslash.
+# Escaping with backslash
 
-x*\.y*      Todas las ocurrencias de 'x' y todas las ocurrencias de 'y' separadas por un punto.
+* Caracteres con significados especiales en Regex ^$(.[)=\ deben ser escapados con '\' backslash.
 
-# Si '.' está dentro de [] entonces su valor es literal y no necesita ser escapado con '\'.
+x*\.y*      Todas las ocurrencias de 'x' y todas las ocurrencias de 'y' separadas por un punto '.' y escapadas 
+            por '\' .
 
-x[#:.]y     
+* Si '.' está dentro de [] entonces su valor es literal y no necesita ser escapado con '\'.
 
+x[#:.]y     Todas las ocurrencias de 'x' e 'y' que se ecuentre separadas por uno de los caracteres contenidos 
+            dentro []. #, : o . 
 
+x[#:\^]y    Todas las ocurrencias de 'x' e 'y' que se ecuentre separadas por uno de los caracteres contenidos 
+            dentro de [], teniendo en cuenta que '^' es escapado con '\'. #, :, ^.
 
+x[#\\\^]y   Todas las ocurrencias de 'x' e 'y' que se ecuentre separadas por uno de los caracteres contenidos 
+            dentro de [], teniendo en cuenta que '\' y '^' son escapados con '\'. #, \, ^.
+
+# Anchors
+
+* '^' es un ancla que indica que los caracteres que le prosiguen pertenecen al inicio de la linea.
+
+^foo.*     Todas las coincidencias que inicien por 'foo' sin importar los carcteres que le prosigan.
+
+* '$' es un ancla que indica que los caracteres que los preceden pertenecen al final de la linea.
+
+.*bar$     Todas las coincidencias que culminen por 'bar' sin importar los carcteres que le precedan.
+
+^foo$      Solo las coincidencias precisas de 'foo', sin nada que lo preceda o prosiga.
 
 
 
