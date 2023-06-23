@@ -19,7 +19,7 @@
 
 # Character Classes with ranges
 
-* El simbolo ^ tiene una significaciion diferente fuera de los  []
+* El simbolo ^ tiene una significacion diferente fuera de los  []
 
 [a-c]       Uno de los caracteres que se encuentre en el rango dados en los [] - a,b o c.
 
