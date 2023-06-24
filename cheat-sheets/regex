@@ -1,6 +1,7 @@
                                      Regex
                                      *****
 # Cheatsheet de Wildcards
+a*          Cero o más repeticiones de un determinado caracter.
 
 .           El punto siginifica un caracter en una sola posición que hace match con cualquier caracter.
 
