@@ -59,5 +59,37 @@ x[#\\\^]y   Todas las ocurrencias de 'x' e 'y' que se ecuentre separadas por uno
 
 ^foo$      Solo las coincidencias precisas de 'foo', sin nada que lo preceda o prosiga.
 
+# Extended set
 
++
 
+$
+
+pat1|pat2
+
+()        Un grupo de caracteres como una sola unidad
+
+{m}
+
+{m,n}
+
+#^[0-9][0-9][0-9]$ es ineficiente en n caracteres por ello usamos ^[0-9]{3}$ donde: 
+
+a{m}        Exactamente m repeticiones de el caracter a.
+
+#^[a-z]{4}$
+#^[a-z]{5}$
+#^[a-z]{5}$
+#^[a-z]{6}$ es ineficiente por lo que podenos usar ^[a-z]{4,6}$
+
+a{m,n}      Por lo menos m repeticiones de la letra a y como maximo n repeticiones.
+
+#ha{5}
+#ha{4}
+#ha{6}
+#ha{8}
+#ha{9}      Esta version presenta problemas puesto que en el patron solo se multiplicara
+# la busqueda de a y no ha, por ello debemos usar (). El resulktado para n casos seria el siguiente 
+# (ha){4,}
+
+{m,}        Representa por lo menos m repeticiones del caracter que lo preceda.
