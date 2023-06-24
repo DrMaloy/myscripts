@@ -67,7 +67,7 @@ $
 
 pat1|pat2
 
-()        Un grupo de caracteres como una sola unidad
+()          Un grupo de caracteres como una sola unidad
 
 {m}
 
@@ -89,7 +89,10 @@ a{m,n}      Por lo menos m repeticiones de la letra a y como maximo n repeticion
 #ha{6}
 #ha{8}
 #ha{9}      Esta version presenta problemas puesto que en el patron solo se multiplicara
-# la busqueda de a y no ha, por ello debemos usar (). El resulktado para n casos seria el siguiente 
-# (ha){4,}
+#           la busqueda de 'a' y no 'ha', por ello debemos usar (). El resultado para 'n'
+#           casos seria el siguiente (ha){4,}
 
 {m,}        Representa por lo menos m repeticiones del caracter que lo preceda.
+
+
+
