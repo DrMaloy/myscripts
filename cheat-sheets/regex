@@ -61,21 +61,22 @@ x[#\\\^]y   Todas las ocurrencias de 'x' e 'y' que se ecuentre separadas por uno
 
 # Extended set
 
-+
++           Una o mas recurrencias de un caracater (Al menos 1 coincidencia, no reconoce 0 
+            coincidencias).
 
-$
+?           Booleano, o cero ocurrencias o 1 ocurrencia de un determinado caracter.              
 
-pat1|pat2
+(pat1|pat2)   Patron 1 o Patron 2.
 
-()          Un grupo de caracteres como una sola unidad
+()          Un grupo de caracteres como una sola unidad.
 
-{m}
+{m}         'm' repeticiones de un parametro.
 
-{m,n}
+{m,n}       Un rango de repeticiones desde 'm' hasta 'n'.
 
 #^[0-9][0-9][0-9]$ es ineficiente en n caracteres por ello usamos ^[0-9]{3}$ donde: 
 
-a{m}        Exactamente m repeticiones de el caracter a.
+a{m}        Exactamente 'm' repeticiones de el caracter 'a'.
 
 #^[a-z]{4}$
 #^[a-z]{5}$
@@ -95,5 +96,9 @@ a{m,n}      Por lo menos 'm' repeticiones de la letra 'a' y como maximo 'n' repe
 {m,}        Representa por lo menos 'm' repeticiones del caracter que lo preceda.
 
 {,m}        Representa hasta 'm' repeticiones del caracter que lo precede.
+
+#logwood
+#plywood    En caso muy estritos posible entregar 2 patrones redactados de la siguiente 
+#           manera (log|ply)wood.
 
 
