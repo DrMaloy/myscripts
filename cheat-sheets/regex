@@ -60,6 +60,8 @@ x[#\\\^]y   Todas las ocurrencias de 'x' e 'y' que se ecuentre separadas por uno
 ^foo$      Solo las coincidencias precisas de 'foo', sin nada que lo preceda o prosiga.
 
 # Extended set
+ 
+* Para el grupo extendido en POSIX linux debemos agregar una -E al comando grep.
 
 +           Una o mas recurrencias de un caracater (Al menos 1 coincidencia, no reconoce 0 
             coincidencias).
