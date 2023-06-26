@@ -1,7 +1,7 @@
                                      Regex
                                      *****
 # Cheatsheet de Wildcards
-a*          Cero o más repeticiones del caracter que precede a '*' 
+a*          Cero o más repeticiones solo del caracter que precede a '*' 
 
 .           El punto siginifica un caracter en una sola posición que hace match con cualquier caracter.
 
