@@ -1,0 +1,22 @@
+                                   Uso de SED
+                                   **********
+
+-e      Esta opcion is necesaria cuando entregas mas de una instruccion en la linea de comandos.
+
+# La forma adecuada de usar 'sed' es la siguiente:
+
+        command    [option]   script    filename
+
+# La sintaxis basica de 'sed' es la siguiente:
+
+        sed  's/patron/reemplazo/flag'
+
+Donde la 's' significa substitucion.
+
+El 'patron' es el patron de busqueda de que ejecutara sed.
+
+El 'reemplazo' es elemento que sera colocado en vez del patron.
+
+'Flag' es una opcion extra que dedine el comportamiento del patron
+en el file ingresado. Por ejemplo la flag 'g' significa aplicar ca
+mbio a nivel global.
