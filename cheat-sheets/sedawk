@@ -1,15 +1,19 @@
                                    Uso de SED
                                    **********
 
--e      Esta opcion is necesaria cuando entregas mas de una instruccion en la linea de comandos.
+ Sed pasa por cada una de las lineas de un determinado file, afectando en su paso a la primera
+ coincidencia por linea que encuentre . Ese comportamiento se puede cambiar al usar el flag 'g'.
+
 
 # La forma adecuada de usar 'sed' es la siguiente:
 
-        command    [option]   script    filename
+        sed    [option]   script    filename
+        
+-e      Esta opcion is necesaria cuando entregas mas de una instruccion en la linea de comandos.
 
 # La sintaxis basica de 'sed' es la siguiente:
 
-        sed  's/patron/reemplazo/flag'
+        sed  's/patron/reemplazo/flag' file
 
 Donde la 's' significa substitucion.
 
@@ -20,3 +24,49 @@ El 'reemplazo' es elemento que sera colocado en vez del patron.
 'Flag' es una opcion extra que dedine el comportamiento del patron
 en el file ingresado. Por ejemplo la flag 'g' significa aplicar ca
 mbio a nivel global.
+
+# Tres formas de especificar multiples intrucciones a 'sed'
+
+        sed 's/patron1/reemplazo1/; s/patron2/reemplazo2/' file
+
+        sed -e 's/patron1/reemplazo1/' -e 's/patron2/reemplazo2/' file
+
+        $ sed '
+        > s/patron1/reemplazo1/ 
+        > s/patron2/reemplazo2/
+        > s/patron3/reemplazo3/' file
+
+# Manejo de scripts en 'sed'
+
+El file conteniendo las intrucciones de 'sed' deben tener una estructura similar a esta.
+
+        s/patron1/reemplazo1/ 
+        s/patron2/reemplazo2/ 
+        s/patron3/reemplazo3/ 
+        s/patron4/reemplazo4/ 
+
+-f      Esta opcion es necesaria para que el comando 'sed' lea las intrucciones desde un file.
+
+        Ejem:
+
+        sed -f sed_script file
+
+# Guardando los cambios hechos por 'sed'
+
+'Sed' por defecto no guarda los cambios hechos a algun documento, estos solo son mostrados en
+std output, por lo que se hace necesario la rediccion del contenido. * Si se desea hacer el
+cambio de manera inmediata se debe utilizar la opcion 'i'.
+
+        sed -f sed_script file > new_file
+
+# Suprimiendo el display automatico de 'sed'
+
+Para modidicar el comportamiento standar de 'sed' podemos usar algunas opciones que nos permiten
+obetener resultados personalizados.
+
+        sed -n 's/patron/reemplazo/p' file
+
+Con la opcion 'n' sed solo mostrara las lineas con los patrones afectados que lleven la bandera 
+'p' al final. Es decir que evitara mostrar el contenido a menos que aquellos que queramos mostrar
+premeditamente lleve la bandera 'p'.
+
