@@ -70,3 +70,60 @@ Con la opcion 'n' sed solo mostrara las lineas con los patrones afectados que ll
 'p' al final. Es decir que evitara mostrar el contenido a menos que aquellos que queramos mostrar
 premeditamente lleve la bandera 'p'.
 
+
+                                  Sed Avanzado
+                                  ************
+
+Existen formas creativas de utilizar las opciones que hemos conocido de 'sed', a continuacion vere
+mos usos avanzados de los comandos de 'sed' que buscan darle un uso mas dinamico.
+
+  Sintaxis avanzada
+  
+        sed [-n] [-e 'script'] [-f archivo] file1 file2 
+
+    -n  Indica que se suprima la salida standar.
+    -e  Indica que se ejecute el script que viene a continuacion.
+        *Si no se empea la opcion -f se puede omitir -e
+    -f  Indica que las ordenes se tomaran de un archivo.
+    -r  Se utilizan expresiones regulares extendidas.
+
+  Sintaxis del script
+
+        sed [inicio_ubicacion[,fin_ubicaion]] intruccion [argumentos]
+
+        sed         '2        ,5                   p'     file
+
+# Manejo de ubicaciones en 'sed'
+
+En primer lugar hay que entender que sed por defecto afectara a todas las lineas en un determinado
+file. Por ello hay dos formas de especificar las lineas que queremos afectar.
+
+        Mediante numeros:
+
+        Especificamos el numero de linea de principio y de fin, separados por una coma.
+        ("$" significa la ultima linea)
+
+        Mediante expresiones regulares (REGEX): 
+
+        Son las lineas que cumplen con las expresion regular especificada /EXPRESION/
+
+Asi tenemos los siguientes ejemplos:
+
+        1,5 => de la linea 1 a la 5
+
+        /pepe/,$ => desde la linea que contiene la palabra pepe hasta la ultima
+
+# Manejo de instrucciones en 'sed'
+
+        i\  = Insertar linea antes de la linea actual
+        a\  = Insertar linea despues de la linea actual
+        c\  = Sustuye la linea actual por la especificada a continuacion
+        d   = Borrar linea actual
+        p   = Imprimir linea actual en salida estandar
+        s   = Sustituir cadena en linea actual.
+        !   = Aplicar instruccion a las lineas no seleccionadas por la condicion
+        q   = Abandona el proceso cuando se alcanza la linea especificada
+
+
+
+
