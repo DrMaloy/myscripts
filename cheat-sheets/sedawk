@@ -112,14 +112,14 @@ Asi tenemos los siguientes ejemplos:
         1,5 => de la linea 1 a la 5
 
         /pepe/,$ => desde la linea que contiene la palabra pepe hasta la ultima
-        * Hay que considerar que afecta a la intruccion afectara a todas las coincidencias
+        * Hay que considerar que la intruccion afectara a todas las coincidencias
         del patron, pero el rango SOLO a la primera coincidencia.
 
 # Manejo de instrucciones en 'sed'
 
         i\  = Insertar linea antes de la linea actual
         a\  = Insertar linea despues de la linea actual
-        c\  = Sustuye la linea actual por la especificada a continuacion
+        c\  = Sustiye la linea actual por la especificada a continuacion
         d   = Borrar linea actual
         p   = Imprimir linea actual en salida estandar
         s   = Sustituir cadena en linea actual.
