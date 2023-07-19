@@ -119,7 +119,8 @@ Asi tenemos los siguientes ejemplos:
 
         i\  = Insertar linea antes de la linea actual
         a\  = Insertar linea despues de la linea actual
-        c\  = Sustiye la linea actual por la especificada a continuacion
+        c\  = Sustiye la linea actual por la especificada a continuacion 
+        *cambio de linea, no sustitucion de palabra.
         d   = Borrar linea actual
         p   = Imprimir linea actual en salida estandar
         s   = Sustituir cadena en linea actual.
