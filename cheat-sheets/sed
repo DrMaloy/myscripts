@@ -127,6 +127,9 @@ Asi tenemos los siguientes ejemplos:
         !   = Aplicar instruccion a las lineas no seleccionadas por la condicion
         q   = Abandona el proceso cuando se alcanza la linea especificada
 
+# Consideraciones extras
 
+        \L& = Convierte a lowercase
+        \U& = Convierte a uppercase
 
 
