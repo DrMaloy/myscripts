@@ -132,4 +132,25 @@ Asi tenemos los siguientes ejemplos:
         \L& = Convierte a lowercase
         \U& = Convierte a uppercase
 
+# Agrupando comandos
+        
+        Usando {} es posible agrupar comandos dentro de direcciones en sed. Es posible
+        hacer un nesting de direcciones si se quiere specificar un rango de lineas y luego
+        dentro de ese rango, especificar otras direciones.
+
+        Sintaxis:
+
+        /dir_ini/,/dir_fin/ {
+                /patron/accion
+                }*
+
+        * Las {} deben abrirse al final de las direcciones especificadas y se deben cerrar 
+        en su propia linea en blanco.
+
+        Ejem:
+
+        /^\.TS/,/^\.TE/{
+              /^$/d
+        }
+
 
