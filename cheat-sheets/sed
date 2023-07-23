@@ -127,6 +127,37 @@ Asi tenemos los siguientes ejemplos:
         !   = Aplicar instruccion a las lineas no seleccionadas por la condicion
         q   = Abandona el proceso cuando se alcanza la linea especificada
 
+        sintaxis y ejemplos:
+
+        sed -e '10i\HOLA'
+
+        Esto se interpreta como: sobre la linea 10 insertamos la palabra HOLA.
+        
+        sed -e '5a\CHAU'
+
+        Esto se interpreta como: bajo la linea 5 insertamos la palabra CHAU.
+
+        sed -e '1,10s/a/@/g'
+
+        Esto se interpreta como: En el bloque de lineas comprendidas entre la 1 a la 10
+        se realiza la sustitucion de la a por la @, de manera general, es decir, en cada
+        una de sus coincidencias.
+
+        sed -e '/barriga/,10c\Belly'
+
+        Esto se interpreta como: Desde la palabra barriga, hasta la linea 10 todas esas
+        lineas se convertiran en la palabra Belly.
+
+        sed -ne '1,5p'
+
+        Esto se interpreta como: Se imprime solo el contenido de las lineas 1 al 5.
+
+        sed -ne '1,7!p'
+
+        Esto se interpreta como: Se imprimen todas las lineas menos las contenidas
+        entre la 1 a la 7.
+
+
 # Consideraciones extras
 
         \L& = Convierte a lowercase
