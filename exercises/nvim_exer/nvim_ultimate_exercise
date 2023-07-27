@@ -1,0 +1,23 @@
+Bienvenido al ultimate nvim exercise
+
+La idea es pulir las habilidades que tenemos, al maximo, con nvim.
+
+Empezemos...
+
+                                    El punto
+
+La funcion del punto es repetir todos los keystrokes dados entre insert y
+normal mode.
+
+Eliminar la palabra Line, usando una vez 'x' y luego '.'
+
+Line one
+Line two
+Line three
+Line four
+Line five
+Line six
+Line seven
+Line eight
+Line nine
+Line five
