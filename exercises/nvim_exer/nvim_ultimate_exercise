@@ -21,3 +21,32 @@ Line seven
 Line eight
 Line nine
 Line five
+
+Eliminar la lineas usando la 'dd' y luego usando el '.'
+
+Borra este primera linea
+Borra este segunda linea
+Borra este tercera linea
+Borra este cuarta linea
+Borra este quinta linea
+Borra este sexta linea
+Borra este septima linea
+Borra este octava linea
+Borra este novena linea
+Borra este decima linea
+
+Tabular adecuadamente usando '>G' y luego '.'
+*'>G' tabula todo lo que se encuentre debajo hasta el final del file.
+
+No tabules esta linea
+tabula esta una vez respecto a la anterior
+tabula esta una vez respecto a la anterior
+tabula esta una vez respecto a la anterior
+tabula esta una vez respecto a la anterior
+tabula esta una vez respecto a la anterior
+tabula esta una vez respecto a la anterior
+tabula esta una vez respecto a la anterior
+tabula esta una vez respecto a la anterior
+tabula esta una vez respecto a la anterior
+
+
