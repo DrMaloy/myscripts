@@ -49,6 +49,15 @@ tabula esta una vez respecto a la anterior
 tabula esta una vez respecto a la anterior
 tabula esta una vez respecto a la anterior
 
-Agregar un ';' al final de cada linea
+Agregar un ';' al final de cada linea utilizando el comando '.'
 
-var 
+var foo = 1
+var bar = 'a'
+var xar = $(hola)
+var moc = foo + bar
+var soc = @fin
+var foobar = 1 + 2
+var fooxar = 'a' / 'b'
+var foomoc = $(hola) | less
+var foosoc = foo + bar + tec
+var nofoox = @fin! var
