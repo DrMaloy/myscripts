@@ -7,3 +7,4 @@ asi como proveer de practica para el dominio de git.
 
 -   Se ha actualizado la mayoría de files de Personales, incluyendo cambios en la configuración 
     de Nvim y se ha subido la configuración de .tmux.config y algunos detalles de Regex.
+
