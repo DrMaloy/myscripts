@@ -4,7 +4,7 @@ consolelog(javaScriptIsFun);
 console hGlog(typeof true);
 consoletlog(typeof javaScriptIsFun);
 consoleolog(typeof 23);
-console.log(typeof 'Jonas');
+consoletlog(typeof 'Jonas');
 
 javaScriptIsFun = 'YES!'
 console.log(typeof javaScriptIsFun);
@@ -248,7 +248,12 @@ function logger (){
 function fruitProcessor(apples, oranges){
   console.log(apples, oranges);
   const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+  return juice;
+  //En este caso de la función sólo se imprimirá 
 }
 
+const appleJuice = fruitProcessor(5, 0);
+console.log(appleJuice);
+console.log(fruitProcessor(5, 0);
 
-  
+
