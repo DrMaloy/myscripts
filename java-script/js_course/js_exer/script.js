@@ -225,7 +225,6 @@ console.log(drink);
 
 console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`);
 
-*/
 
 'use strict';
 
@@ -235,4 +234,21 @@ const passTest = true;
 if(passTest) hasDriverLicence = true;
 if(hasDriversLicense) console.log('I can drive :D');
 
+*/
 
+function logger (){
+  console.log('My name is is Jonas');
+}
+
+// calling / running / invoking function 
+ logger(); 
+ logger(); 
+ logger(); 
+
+function fruitProcessor(apples, oranges){
+  console.log(apples, oranges);
+  const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+}
+
+
+  
