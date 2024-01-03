@@ -4,7 +4,7 @@ consolelog(javaScriptIsFun);
 console hGlog(typeof true);
 consoletlog(typeof javaScriptIsFun);
 consoleolog(typeof 23);
-console.log(typeof 'Jonas');
+consoletlog(typeof 'Jonas');
 
 javaScriptIsFun = 'YES!'
 console.log(typeof javaScriptIsFun);
@@ -212,8 +212,6 @@ if (day === 'monday') {
   console.log('Not a valid day!');
 }
 
-
-
 const age = 23;
 //age >= 18 ? console.log('I like to drink wine'):
 //console.log('I like to drink water');
@@ -228,21 +226,52 @@ console.log(drink);
 console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`);
 
 
-const bill = 275;
-const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
-console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
+'use strict';
+
+let hasDriversLicence = false;
+const passTest = true;
+
+if(passTest) hasDriverLicence = true;
+if(hasDriversLicense) console.log('I can drive :D');
 
 
-const bill = 301;
-const tipo = bill <= 50 && bill >= 1 ? bill * 0.2 : bill * 0.15;
-console.log(`The bill was ${bill}, the tip was ${tip}, and the total is ${total + tip}`);
+function logger (){
+  console.log('My name is is Jonas');
+}
 
+// calling / running / invoking function 
+ logger(); 
+ logger(); 
+ logger(); 
+
+function fruitProcessor(apples, oranges){
+  console.log(apples, oranges);
+  const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+  return juice;
+  //En este caso de la función sólo se imprimirá 
+  //si la variable juicie es llamada
+}
+
+const appleJuice = fruitProcessor(5, 0);
+console.log(appleJuice);
+console.log(fruitProcessor(5, 0);
 
 */
 
-const bill = 10;
-const tip = bill >= 1 && bill <= 100 ? bill * 0.2 : bill * 0.15;
-console.log(`The bill was ${bill}, the tip was ${tip}, and the total was ${bill + tip}`);
+// Function declaration
+function calcAge1(birthYear){
+  return 2037 - birthYear;
+}
+
+const age1 = calcAge1(1991);
+
+// Function expression
+const calcAge2 = function (birthYear){
+  return 2037 - birthYear
+}
+const age2 = calcAge2(1991);
+
+console.log(age1, age2);
 
 
 
